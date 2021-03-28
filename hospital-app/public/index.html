@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,11 +26,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Hospital Price Comparison</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +42,32 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  
+    <!--
+<script>
+  function readSingleFile(evt) {
+    var f = evt.target.files[0]; 
+    if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+          var contents = e.target.result;
+          document.write("File Uploaded! <br />" + "name: " + f.name + "<br />" + "content: " + contents + "<br />" + "type: " + f.type + "<br />" + "size: " + f.size + " bytes <br />");
+
+          var lines = contents.split("\n"), output = [];
+          for (var i=0; i<lines.length; i++){
+            output.push("<tr><td>" + lines[i].split(",").join("</td><td>") + "</td></tr>");
+          }
+          output = "<table>" + output.join("") + "</table>";
+          document.write(output);
+     }
+      r.readAsText(f);
+      document.write(output);
+    } else { 
+      alert("Failed to load file");
+    }
+  }
+  document.getElementById('fileinput').addEventListener('change', readSingleFile); -->
+<!-- </script> -->
+
   </body>
 </html>
