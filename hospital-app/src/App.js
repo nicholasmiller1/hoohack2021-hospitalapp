@@ -104,8 +104,9 @@ function App() {
   }
   
   return (
+    
     <div className="App">
-      <div style={{height: "70px", background: "#f7f7f7", borderBottom: "1px solid black"}}><h1 style={{bottom: "0px", margin: "0", paddingTop: "10px"}}>Hospital Price Comparison</h1></div>
+      <div style={{height: "70px", background: "#f7f7f7", borderBottom: "1px solid black"}}><h1 style={{bottom: "0px", margin: "0", paddingTop: "10px"}}>Hospital Price Comparator</h1></div>
       {data !== undefined && <DataTable json={data} />}
 
       <br/>
@@ -298,5 +299,6 @@ const renderCellExpand = (params) => {
       value={params.value ? params.value.toString() : ''}
       width={params.colDef.width}
     />
+    
   );
 }
